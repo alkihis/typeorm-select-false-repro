@@ -1,0 +1,17 @@
+{
+  "name": "typeorm-select-false-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Minimal reproduction: repository.save() crashes on a select:false date[] column loaded with addSelect (PostgreSQL)",
+  "type": "commonjs",
+  "scripts": {
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down -v",
+    "repro": "node repro.js"
+  },
+  "dependencies": {
+    "pg": "8.13.1",
+    "reflect-metadata": "0.2.2",
+    "typeorm": "1.1.3"
+  }
+}
